@@ -1,4 +1,16 @@
 .Pokedex {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.Pokedex-winner {
+  flex: 1 0 100%;
+  color: green;
+  font-weight: 800;
+}
+
+.Pokedex-score {
+  flex: 1 0 100%;
+  font-weight: 800;
 }

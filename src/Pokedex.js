@@ -1,19 +1,21 @@
 import React from "react";
-
-import pokeArr from "./helpers.js";
 import Pokecard from "./Pokecard.js";
-import "./Pokedex.css"
+import { expTotal } from "./helpers.js";
 
-function Pokedex() {
+import "./Pokedex.css";
+
+function Pokedex({pokeArr,isWinner}) {
   return (
     <div className="Pokedex">
       {pokeArr.map((pokemon) => {
         return (
-        <div className="Pokedex-pokemon">
-          <Pokecard pokemon={pokemon} />
-        </div>
+          <div className="Pokedex-pokemon">
+            <Pokecard pokemon={pokemon} />
+          </div>
         );
       })}
+      <h3 className="Pokedex-score">Score: {expTotal(pokeArr)}</h3>
+      <div className="Pokedex-winner">{isWinner ? "This hand wins!" : ""}</div>
     </div>
   );
 }

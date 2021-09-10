@@ -9,4 +9,21 @@ const pokeArr = [
   { id: 133, name: "Eevee", type: "normal", base_experience: 65 },
 ];
 
+function shuffleArr(arr) {
+  for (let i = arr.length -1; i>0; i--) {
+    const j = Math.floor(Math.random() * i);
+    const temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+  }
+  return arr;
+}
+
+function expTotal(arr){
+  return arr.reduce( (acc,pokemon) => {
+    return acc + pokemon.base_experience;
+  },0)
+}
+
 export default pokeArr;
+export { shuffleArr, expTotal };
