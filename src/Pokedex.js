@@ -2,6 +2,7 @@ import React from "react";
 
 import pokeArr from "./helpers.js";
 import Pokecard from "./Pokecard.js";
+import "./Pokedex.css"
 
 function Pokedex() {
   return (
